@@ -1,0 +1,151 @@
+/* =====     Forms     ===== */
+input {
+			box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+}
+// @include placeholder {
+// 	color: $black;
+// 	font-size:1rem;
+// 	@include font-regular();
+// 	opacity: 1;
+// }
+.inline {
+	display: block;
+	div {
+		display: inline-block;
+		float: left;
+		margin-right: 20px;
+	}
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+.input,
+textarea,
+select,
+.form-control {
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: $white;
+	border: 0;
+	@include border-radius(5px);
+	color: $text-color;
+	display: block;
+	font-size:1.6rem;
+	@include font-regular();
+	height: 40px;
+	padding: 0 20px;
+	width: 100%;
+	&:focus {
+				appearance: none;
+		-webkit-appearance: none;
+				box-shadow: none;
+		-webkit-box-shadow: none;
+		outline: 0;
+	}
+	@include max(1199) {
+		border-width: 1px;
+		height: 40px;
+		padding: 0 10px;
+	}
+}
+textarea.form-control {
+	height: 100px;
+	padding: 15px 20px;
+	resize: none;
+	@include max(1199) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+select  {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: $white url('../images/select-icon.svg') no-repeat 96% 50%;
+	outline: none;
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+option {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+.input-holder {
+	margin-bottom: 15px;
+	position: relative;
+	@include clearfix;
+	&.error {
+		input,
+		textarea {
+			border-color: $red;
+		}
+	}
+	.error,
+	.newerror {
+		background-color: $red;
+		@include border-radius(0px);
+		color: $white;
+		display: inline-block;
+		font-size: 11px;
+		right: 0;
+		line-height: 1;
+		padding: 5px 5px;
+		position: absolute;
+		top: -19px;
+		&:after {
+			border-bottom: none;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $red;
+			bottom: -5px;
+			content: '';
+			right: 10px;
+			position: absolute;
+		}
+	}
+	.newerror {
+		top: -20px;
+		@include max(767) {
+			top: -25px;
+		}
+	}
+}
+.tgl-password {
+	position: relative;
+	.toggle-password {
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		right: 10px;
+		color: rgba(0,0,0,0.651);
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		svg {
+			width: 20px;
+			height: 20px;
+			opacity: 0.5;
+		}
+		cursor: pointer;
+		.tgl-pswd-hide {
+			display: none;
+		}
+	}
+	
+}
+.tgl-show-pasword {
+	.toggle-password .tgl-pswd-hide {
+		display: block;
+	}
+	.toggle-password .tgl-pswd-show {
+		display: none;
+	}
+	svg {
+		opacity: 1!important;	
+	}
+}

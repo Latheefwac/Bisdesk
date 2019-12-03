@@ -1,0 +1,50 @@
+
+$(function() {
+    var loc = window.location.href; // returns the full URL
+    var home = "https://demo.webandcrafts.com/bisdesk/html/index.php";
+    var home2 = "https://demo.webandcrafts.com/bisdesk/html/";
+    if(loc==home) {
+        $('header').removeClass("logged");
+    }
+    if(loc==home2) {
+        $('header').removeClass("logged");
+    }
+    var str1 = $('main').attr('class');
+    var str2 = "search-result-page";
+    if(str1.indexOf(str2) != -1){
+       $('.bd-footer').addClass("filter-page-footer");
+    }
+    
+  });
+
+  $('.sr-item-box .sr-ctn-bx').click(function(event){
+    event.stopPropagation();
+    event.preventDefault();
+    window.location.href = 'https://demo.webandcrafts.com/bisdesk/html/product-detail.php';
+});
+
+$(".banner-search input").keyup(function(event) {
+    $('.bd-search').removeClass('error');
+    if (event.keyCode === 13) {
+        $('.bd-search').removeClass('error');
+        if($(this).val() != "") {
+            $(".banner-search .btn-search").click();
+        }
+        else {
+            $('.bd-search').addClass('error');
+        }
+    }
+    });
+  
+    $(".banner-search .btn-search").click(function(evt){
+        evt.stopPropagation();
+        if($(".banner-search input").val() != "") {
+            window.location.href = "//demo.webandcrafts.com/bisdesk/html/product.php";
+        } 
+        else {
+            $('.bd-search').addClass('error');
+        }   
+    });
+    $(document).click(function() {
+        $('.bd-search').removeClass('error');
+    });    

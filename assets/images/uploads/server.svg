@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="49" viewBox="0 0 34 49">
+  <g id="Group_1873" data-name="Group 1873" transform="translate(-1274 -1127)">
+    <g id="Group_1869" data-name="Group 1869" transform="translate(1 1)">
+      <g id="Rectangle_1534" data-name="Rectangle 1534" transform="translate(1273 1126)" fill="#fff" stroke="#707070" stroke-width="1.5">
+        <rect width="34" height="49" rx="2" stroke="none"/>
+        <rect x="0.75" y="0.75" width="32.5" height="47.5" rx="1.25" fill="none"/>
+      </g>
+      <g id="Rectangle_1531" data-name="Rectangle 1531" transform="translate(1279 1139)" fill="none" stroke="#707070" stroke-width="1.5">
+        <rect width="22" height="8" rx="2" stroke="none"/>
+        <rect x="0.75" y="0.75" width="20.5" height="6.5" rx="1.25" fill="none"/>
+      </g>
+      <g id="Rectangle_1532" data-name="Rectangle 1532" transform="translate(1279 1149)" fill="none" stroke="#707070" stroke-width="1.5">
+        <rect width="22" height="9" rx="2" stroke="none"/>
+        <rect x="0.75" y="0.75" width="20.5" height="7.5" rx="1.25" fill="none"/>
+      </g>
+      <g id="Rectangle_1533" data-name="Rectangle 1533" transform="translate(1279 1160)" fill="none" stroke="#707070" stroke-width="1.5">
+        <rect width="22" height="8" rx="2" stroke="none"/>
+        <rect x="0.75" y="0.75" width="20.5" height="6.5" rx="1.25" fill="none"/>
+      </g>
+      <g id="Ellipse_328" data-name="Ellipse 328" transform="translate(1296 1133)" fill="#fff" stroke="#707070" stroke-width="1.5">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="0.75" fill="none"/>
+      </g>
+      <g id="Ellipse_333" data-name="Ellipse 333" transform="translate(1291 1133)" fill="#fff" stroke="#707070" stroke-width="1.5">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="0.75" fill="none"/>
+      </g>
+      <g id="Ellipse_330" data-name="Ellipse 330" transform="translate(1296 1142)" fill="#fff" stroke="#707070" stroke-width="1.5">
+        <circle cx="1" cy="1" r="1" stroke="none"/>
+        <circle cx="1" cy="1" r="0.25" fill="none"/>
+      </g>
+      <g id="Ellipse_331" data-name="Ellipse 331" transform="translate(1296 1152)" fill="#fff" stroke="#707070" stroke-width="1.5">
+        <circle cx="1" cy="1" r="1" stroke="none"/>
+        <circle cx="1" cy="1" r="0.25" fill="none"/>
+      </g>
+      <g id="Ellipse_334" data-name="Ellipse 334" transform="translate(1296 1163)" fill="#fff" stroke="#707070" stroke-width="1.5">
+        <circle cx="1" cy="1" r="1" stroke="none"/>
+        <circle cx="1" cy="1" r="0.25" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

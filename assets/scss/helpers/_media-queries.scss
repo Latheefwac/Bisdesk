@@ -1,0 +1,106 @@
+@mixin min-max($resMin, $resMax) {
+  @media (min-width: $resMin+px) and (max-width: $resMax+px) {
+    @content;
+  }
+}
+@mixin max($res) {
+  @media (max-width: $res+px) {
+    @content;
+  }
+}
+@mixin min($res) {
+  @media (min-width: $res+px) {
+    @content;
+  }
+}
+@mixin ipad-pro($proMin, $proMax) {
+	@media only screen  and (min-device-width: $proMin+px) and (max-device-width: $proMax+px) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+// BREAKPOINTS
+@mixin viewport($media) {
+	@if $media == desk {
+		@media screen and (min-width: $lg-width) {
+			@content;
+		}
+	}
+	// Laptop
+	@else if $media == qa {
+		@media screen and (min-width: $lg-width) and (max-width: $lap-width) {
+			@content;
+		}
+	}
+	// Default
+	@else if $media == norm {
+		@media screen and (min-width: $lap-width) and (max-width: $default-width) {
+			@content;
+		}
+	}
+	//qa
+	@else if $media == desk-qa {
+		@media screen and (max-width: $qa-width) {
+			@content
+		}
+	}
+	// iPad
+	@else if $media == ipad-min {
+		@media screen and (min-width: $sm-width) {
+			@content;
+		}
+	}
+	@else if $media == ipad-max {
+		@media screen and (max-width: $lg-width - 1) {
+			@content;
+		}
+	}
+	@else if $media == ipad-only {
+		@media screen and (min-width: $sm-width) and (max-width: $lg-width - 1) {
+			@content;
+		}
+	}
+	// iPad Landscape-mode Media
+	@else if $media == ipad-land-only {
+		@media screen and (min-width: $md-width) and (max-width: $lg-width - 1) {
+			@content;
+		}
+	}
+	@else if $media == ipad-land-min {
+		@media screen and (min-width: $md-width) {
+			@content;
+		}
+	}
+	// iPad Portrait-mode Media
+	@else if $media == ipad-port-only {
+		@media screen and (min-width: $sm-width) and (max-width: $md-width - 1) {
+			@content;
+		}
+	}
+	@else if $media == ipad-port-max {
+		@media screen and (max-width: $md-width - 1) {
+			@content;
+		}
+	}
+	// iPhone/Mobile
+	@else if $media == mob {
+		@media screen and (max-width: $sm-width - 1) {
+			@content;
+		}
+	}
+	@else if $media == mob-land-only {
+		@media screen and (min-width: $xs-width) and (max-width: $sm-width - 1) {
+			@content;
+		}
+	}
+	@else if $media == mob-port-max {
+		@media screen and (max-width: $xs-width - 1) {
+			@content;
+		}
+	}
+	@else if $media == mob-xs {
+		@media screen and (max-width: $xs-width - 1) {
+			@content;
+		}
+	}
+}

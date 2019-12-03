@@ -1,0 +1,265 @@
+// Clearfix
+@mixin clearfix {
+  *zoom: 1;
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.alignBoth {
+  @include align(both);
+}
+.alignTop {
+  @include align(top);
+}
+.alignBottom {
+  @include align(bottom);
+}
+.alignVcenter {
+  @include align(vcenter);
+}
+.alignLeft {
+  @include align(left);
+}
+.alignRight {
+  @include align(right);
+}
+.alignHcenter {
+  @include align(hcenter);
+}
+@mixin font-light {
+  font-weight: $font-light;
+}
+@mixin font-regular {
+  font-weight: $font-regular;
+} 
+@mixin font-semibold {
+  font-weight: $font-semibold;
+}
+@mixin font-medium  {
+   font-weight: $font-medium;
+}
+@mixin font-bold  {
+   font-weight: $font-bold;
+}
+// Link Styles
+.lnk-ftrs {
+          appearance: none;
+  -webkit-appearance: none;
+  border: none;
+          box-shadow: none;
+  -webkit-box-shadow: none;
+  outline: none;
+          text-shadow: none;
+  -webkit-text-shadow: none;
+}
+// Image Effects
+@mixin grayscale($number) {
+          filter: grayscale($number);
+     -moz-filter: grayscale($number);
+      -ms-filter: grayscale($number);
+       -o-filter: grayscale($number);
+  -webkit-filter: grayscale($number);
+}
+@mixin sepia($number) {
+          filter: sepia($number);
+     -moz-filter: sepia($number);
+      -ms-filter: sepia($number);
+  -webkit-filter: sepia($number);
+}
+@mixin saturate($number) {
+          filter: saturate($number);
+     -moz-filter: saturate($number);
+      -ms-filter: saturate($number);
+  -webkit-filter: saturate($number);
+}
+@mixin hue-rotate($deg) {
+          filter: hue-rotate($deg);
+     -moz-filter: hue-rotate($deg);
+      -ms-filter: hue-rotate($deg);
+  -webkit-filter: hue-rotate($deg);
+}
+@mixin invert($decimal) {
+          filter: invert($decimal);
+     -moz-filter: invert($decimal);
+      -ms-filter: invert($decimal);
+  -webkit-filter: invert($decimal);
+}
+@mixin brightness($number) {
+          filter: brightness($number);
+     -moz-filter: brightness($number);
+      -ms-filter: brightness($number);
+  -webkit-filter: brightness($number);
+}
+@mixin contrast($number) {
+          filter: contrast($number);
+     -moz-filter: contrast($number);
+      -ms-filter: contrast($number);
+  -webkit-filter: contrast($number);
+}
+@mixin blur($pixel) {
+          filter: blur($pixel);
+     -moz-filter: blur($pixel);
+      -ms-filter: blur($pixel);
+  -webkit-filter: blur($pixel);
+}
+// Box Shadow
+@mixin box-shadow($x, $y, $blur, $color) {
+          box-shadow: $x $y $blur $color;
+  -webkit-box-shadow: $x $y $blur $color;
+}
+// Transition Effect
+@mixin transition($property, $function, $time) {
+          transition: $property $function $time;
+       -o-transition: $property $function $time;
+  -webkit-transition: $property $function $time;
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+          border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+// Color Options
+$colorScheme: (
+  blue: (
+    primary   : #1a4b9c,
+    dark      : #0b3f99,
+    light     : #007fcb,
+    text      : #0082cb
+  ),
+  green: (
+    primary   : #61a04d,
+    dark      : #4a9227,
+    light     : #66ad44,
+    text      : #68ad45
+  )
+);
+@function setcolor($scheme, $tone: primary) {
+    @return map-get(map-get($colorScheme, $scheme), $tone);
+}
+/*.element {
+  color: setcolor(blue);
+  color: setcolor(blue, secondary);
+}*/
+
+@mixin transition-all($property, $function, $time) {
+      transition: $property $function $time;
+     -o-transition: $property $function $time;
+  -webkit-transition: $property $function $time;
+}
+
+// Transform Object
+@mixin transform($x, $y) {
+      transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+     -o-transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+}
+@mixin transformY($y) {
+      transform: translateY($y);
+    -ms-transform: translateY($y);
+     -o-transform: translateY($y);
+  -webkit-transform: translateY($y);
+}
+@mixin transformX($x) {
+      transform: translateX($x);
+    -ms-transform: translateX($x);
+     -o-transform: translateX($x);
+  -webkit-transform: translateX($x);
+}
+@mixin rotate($degree) {
+      transform: rotate($degree);
+    -ms-transform: rotate($degree);
+     -o-transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+}
+@mixin scale($x, $y) {
+      transform: scale($x, $y);
+    -ms-transform: scale($x, $y);
+     -o-transform: scale($x, $y);
+  -webkit-transform: scale($x, $y);
+}
+// Triangle
+@mixin triangle($size, $color, $direction) {
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+  $foreground-color: nth($color, 1);
+  $background-color: if(length($color) == 2, nth($color, 2), transparent);
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction == up {
+      border-bottom: $height solid $foreground-color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+    } @else if $direction == right {
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+    } @else if $direction == left {
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    }
+  } @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid $background-color;
+    } @else if $direction == up-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      border-left:  $width solid $background-color;
+    } @else if $direction == down-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction == inset-up) {
+    border-color: $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction == inset-down) {
+    border-color: $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction == inset-right) {
+    border-color: $background-color $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $width $height;
+  } @else if ($direction == inset-left) {
+    border-color: $background-color $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $width $height;
+  }
+}
+// Placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}

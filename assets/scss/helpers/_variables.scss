@@ -1,0 +1,125 @@
+// deafult Color
+$primary-color: 		#EE3A4E!default;		// blue
+$sky-blue:#168cdf;
+$light-blue:#E5F7FE;
+$secondary-color:	    #41B6F7 !default;		// red
+$quinary-color:			#272727 !default;		// Grey
+$gray:					#272727;
+$text-color:				#494848 !default;
+$title-color:				#494848;
+$text-alt:					#282828 !default;
+$text-off: 					#281107 !default;
+$white:							#fff !default;
+$black:							#000 !default;
+$red:							#C60C02 !default;
+$gray-900:				#555;
+$orange:				#FCBC3A;
+$border-color:			#d0d0d0 !default;
+$white-dim:rgba($white,0.5);
+$hover-color:$sky-blue;
+
+
+// bisdesk brand color
+$green:      #00AC6F;
+$blue:       #5fa9ec !default;
+$blue-dark:  #217cce !default;
+$darkpurple:#5C2C80;
+$green:      #75b918 !default;
+$green-dark: #4cb834 !default;
+$gray-light: #ddd    !default;
+$gray:       #4e4e4e !default;
+$gray2:      #454545 !default;
+$gray-dark:  #252525 !default;
+$title:		 #7c7c7c !default;
+$bd-color:	 #e5e5e5 !default;
+$red:		 #ce5151 !default;
+$white:		 #FFF	 !default;
+$blue2:      #4497e3 !default;
+$in-active: #A3A3A3;
+$grid-sm-title:#0093C8;
+$grid-title:#5A637C;
+$grid-text:#5A637C;
+$grid-price:#00AC6F;
+$title-blue: #0093C8;
+
+
+$high:#52b830;       
+$moderate: #fcd97a;       
+$low:#2981d2; 
+$p-high:#60b826;
+$p-low:#d51a35;
+$p-moderate:#ffbf12;
+$p-setup:#ed7500;
+$purple:#AC92C3;
+$aquamarine :#83C6BA;
+$yellow:#FFD571;
+$peachpuff:#F9B58D;
+$pink:#F5ACB5;
+$poloblue:#A7C2E4;
+
+
+// Font size
+$base-font:						1.6rem !default;		
+$text-xs:						0.9333rem !default;		
+$text-sm:						0.9375rem !default;		
+$text-md:						1.133rem !default;		
+$text-lg:						1.267rem !default;		
+$h1:							4rem!default;   
+$h2:							3.5rem !default;
+$h3:							3rem !default;
+$h4:							2.5rem !default;	
+$h5:							2rem !default;	
+$h6:							1.6rem !default; 
+$bnr-md:						2rem !default; 		
+$bnr-lg:						3.125rem !default; 		
+$one-rem:						0.0625rem !default;
+
+
+// Font Family
+$font-family:				 'Montserrat', sans-serif;
+$icons:						 'bisdesk' !default;
+//button
+$btn-height:2.333rem;
+$btn-large:$text-lg;
+$btn-medium:$base-font;
+$btn-small:$text-xs;
+$font-light:300;
+$font-regular:400;
+$font-medium:500;
+$font-semibold:600;
+$font-bold:700;
+// Media Queries Mixins
+$xs-width:					480px !default;
+$sm-width:					768px !default;
+$md-width:					992px !default;
+$lg-width:					1200px !default;
+$qa-width:					1360px !default;
+$lap-width:					1440px !default;
+$default-width:				1800px !default;
+
+// Spacing
+$gutter-1:					30px !default;	// 30px
+$spacing:					50px !default;	// 50px.
+
+$bd-border:#E8E8ED;
+
+// zindex
+$header-z:999;
+$mobilemenu-z:998;
+$filter-z:99;
+
+
+// 16px = 1rem (base)
+// 17px = 1.063rem
+// 18px = 1.125rem
+// 19px = 1.188rem
+// 20px = 1.25rem
+// 22px = 1.375rem
+// 24px = 1.5rem
+// 25px = 1.563rem
+// 28px = 1.75rem
+// 30px = 1.875rem
+// 33px = 2.063rem
+// 35px = 2.188rem
+// 45px = 2.813rem
+// 49px = 3.063rem

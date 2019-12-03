@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.904" height="28.905" viewBox="0 0 28.904 28.905">
+  <g id="Page-1" transform="translate(0 0)">
+    <g id="btn_google_dark_normal_ios">
+      <g id="logo_googleg_48dp">
+        <path id="Shape" d="M22.874,10.32a16.606,16.606,0,0,0-.263-2.956H9v5.59h7.778a6.648,6.648,0,0,1-2.884,4.362v3.626h4.671A14.1,14.1,0,0,0,22.874,10.32Z" transform="translate(5.452 4.461)" fill="#4285f4"/>
+        <path id="Shape-2" data-name="Shape" d="M13.872,22.416a13.8,13.8,0,0,0,9.565-3.5l-4.671-3.626A8.719,8.719,0,0,1,5.786,10.71H.957v3.744a14.447,14.447,0,0,0,12.915,7.962Z" transform="translate(0.58 6.488)" fill="#34a853"/>
+        <path id="Shape-3" data-name="Shape" d="M6.366,14.194a8.544,8.544,0,0,1,0-5.492V4.958H1.537a14.47,14.47,0,0,0,0,12.981l4.828-3.744Z" transform="translate(0 3.004)" fill="#fbbc05"/>
+        <path id="Shape-4" data-name="Shape" d="M13.872,5.748A7.807,7.807,0,0,1,19.4,7.909l4.145-4.145A13.889,13.889,0,0,0,13.872,0,14.447,14.447,0,0,0,.957,7.962l4.828,3.744a8.613,8.613,0,0,1,8.087-5.958Z" transform="translate(0.58)" fill="#ea4335"/>
+        <path id="Shape-5" data-name="Shape" d="M0,0H28.9V28.9H0Z" fill="none" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

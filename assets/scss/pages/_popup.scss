@@ -1,0 +1,615 @@
+/**** popup page style ****/
+
+.popup-sec {
+    padding: 100px 0;
+}
+
+.bd-popup {
+    .modal {
+        @include max(767.98) {
+            top: 57px;
+        }
+    }
+    .modal-dialog {
+        width: 90%;
+        margin: 10% auto 0;
+        @include max(1199.98) {
+            margin-top: 10%;
+        }
+        @include max(480.98) {
+            margin-top: 3%;
+        }
+        @include min(768) {
+            width: 573px;
+        }
+        @include max(767.98) {
+            width: 100%!important;
+            height: 100%;
+            background: $white;
+            margin-top: 0!important;
+            .modal-content {
+                @include border-radius(0);
+            }
+        }
+    }
+    .modal {
+        .modal-header {
+            padding: 0;
+        }
+        .close {
+            background-color: transparent;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+            z-index: 2;
+            @include max(767.98) {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:before,
+            &:after {
+                background-color: $gray-dark;
+                width: 1px;
+            }
+            &:hover {
+                opacity: 1;
+                &:before {
+                    @include rotate(45deg);
+                }
+                &:after {
+                    @include rotate(-45deg);
+                }
+            }
+        }
+        .modal-body {
+            padding: 55px 50px 40px;
+            @include max(1199.98) {
+                padding: 35px;
+            }
+            @include max(767.98) {
+                padding: 50px 20px 20px;
+            }
+            .popup-head {
+                font-size: 2.5rem;
+                text-align: center;
+                padding-bottom: 40px;
+                @include max(640) {
+                    padding-bottom: 15px;
+                }
+            }
+            p {
+                text-align: center;
+            }
+            .easy-use {
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(space-between);
+                margin: 20px 0 40px;
+                a {
+                    width: 32%;
+                    border-radius: 4px;
+                    border: 1px solid $gray-light;
+                    padding: 10px 15px;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    font-weight: 400;
+                    @include transition(all, 0.3s, ease-in-out);
+                    @include max(640) {
+                        padding: 10px;
+                    }
+                    @include max(767.98) {
+                        font-size: 0;
+                    }
+                    &:hover {
+                        border-color: $primary-color;
+                    }
+                    span {
+                        width: 30px;
+                        border-radius: 100%;
+                        padding-right: 8px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        @include max(767.98) {
+                            width: 40px;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+            .login-form {
+                @include max(640) {
+                    margin-top: 15px;
+                }
+                .input-holder {
+                    margin-bottom: 25px;
+                    @include max(480) {
+                        margin-bottom: 15px;
+                    }
+                    .form-control {
+                        padding: 0;
+                        border-bottom: 1px solid $gray-light;
+                        @include transition(all, 0.3s, ease-in-out);
+                        border-radius: 0;
+                        &:focus {
+                            border-color: $primary-color;
+                        }
+                    }
+                }
+                .btn-holder {
+                    margin-top: 38px;
+                    @include max(480) {
+                        margin-top: 28px;
+                    }
+                }
+                .btn {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    text-align: center;
+                    display: block;
+                    line-height: 50px;
+                    @include max(480) {
+                        line-height: 40px;
+                        min-height: 40px;
+                    }
+                }
+            }
+            .popup-footer {
+                padding-top: 35px;
+                @include justify-content(space-between);
+                @include max(991.98) {
+                    text-align: center;
+                    display: block;
+                }
+                &>p {
+                    padding: 0;
+                    display: inline-block;
+                    @include max(991.98) {
+                        display: block;
+                        font-size: 1.8rem;
+                    }
+                    &+p {
+                        margin-top: 20px;
+                        @include min(992) {
+                            margin-top: 0;
+                        }
+                    }
+                    a {
+                        color: $primary-color;
+                        @include transition(all, 0.3s, ease-in-out);
+                        &:hover {
+                            color: $gray-dark;
+                        }
+                    }
+                }
+            }
+        }
+        &.forgot-text {
+            .modal-body {
+                .popup-head {
+                    padding-bottom: 15px;
+                }
+                p {
+                    width: 355px;
+                    max-width: 100%;
+                    margin: 0 auto 20px;
+                }
+                .login-form {
+                    .input-holder {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+            &.thank-you {
+                .modal-body {
+                    padding: 100px 50px;
+                    @include max(1199.98) {
+                        padding: 60px 35px;
+                    }
+                    @include max(480) {
+                        padding: 40px 20px;
+                    }
+                    .img_bd {
+                        display: block;
+                        width: 50px;
+                        margin: 0 auto 20px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .login-form .btn-holder {
+                        text-align: center;
+                        .btn {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        &.signup {
+            .modal-body .popup-footer>p {
+                float: none;
+                text-align: center;
+            }
+        }
+        &.enquiry {
+            .list-unstyled {
+                li {
+                    padding-left: 0;
+                }
+            }
+            .selected-flag {
+                padding-left: 0;
+            }
+            .tel-input-none {
+                display: none;
+            }
+            .your-contact {
+                padding-left: 105px!important;
+            }
+            .login-form {
+                .input-holder {
+                    &.drop-down-bd {
+                        position: relative;
+                        border-bottom: 1px solid #ddd;
+                        &.open {
+                            border-bottom: none;
+                        }
+                    }
+                    .intl-tel-input {
+                        display: block;
+                        .selected-flag {
+                            background-color: transparent;
+                            border-bottom: 1px solid $gray-light;
+                            .iti-arrow {
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                                border-top: 7px solid #a0a0a0;
+                                &.up {
+                                    border-bottom: none;
+                                    border-top: 7px solid #a0a0a0;
+                                }
+                            }
+                        }
+                        .country-list {
+                            z-index: 11;
+                        }
+                        .flag-container {
+                            bottom: -1px;
+                        }
+                        .tel-dropdown {
+                            padding-left: 0 !important;
+                            margin-left: 100px;
+                            width: calc(100% - 100px);
+                            font-weight: 500;
+                        }
+                    }
+                    .request-tour-chk label {
+                        font-weight: 500;
+                        line-height: 1.5;
+                        font-size: 1.6rem;
+                    }
+                }
+                .gj-datepicker {
+                    margin-top: -36px;
+                    opacity: 0;
+                    z-index: -1;
+                    pointer-events: none;
+                    width: 94%;
+                    .datepicker {
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-bottom: none;
+                        width: calc(100% - 25px);
+                        &:focus {
+                            position: relative;
+                            z-index: 1;
+                            pointer-events: all;
+                            opacity: 1;
+                        }
+                    }
+                    &.show-date {
+                        position: relative;
+                        z-index: 1;
+                        pointer-events: all;
+                        opacity: 1;
+                    }
+                    .input-group-append {
+                        cursor: pointer;
+                        display: inline-block;
+                        vertical-align: middle;
+                        .btn {
+                            background-color: transparent;
+                            border: none;
+                            border-radius: 0;
+                            padding: 0;
+                            line-height: 0;
+                            height: 100%;
+                            width: 20px;
+                            min-height: 19px;
+                            .gj-icon {
+                                font-size: 0;
+                                background-image: url('../images/calender.svg');
+                                width: 20px;
+                                height: 19px;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                top: -3px;
+                                right: -4px;
+                                left: auto;
+                                @include max(767) {
+                                    top: -2px;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-backdrop {
+    transition-delay: 0.5s;
+}
+
+
+/*** image popup section ***/
+
+.bd-image-popup-gallery {
+    padding-right: 0 !important;
+    height: 100vh;
+    background-color: $white;
+    margin-bottom: 30px;
+    &.show {
+        transition-delay: 0.5s;
+    }
+    .bd-popup .modal .close {
+        top: 91px;
+        right: 43px;
+        opacity: 1;
+    }
+    .modal-content {
+        border-radius: 0;
+    }
+    .modal-header {
+        .close-msg {
+            right: -8%;
+            top: 0;
+            @include max(1700) {
+                right: 0;
+            }
+            @include max(1600) {
+                right: -40px;
+                top: -40px;
+            }
+            @include max(1450) {
+                top: 0;
+            }
+            @include max(1199) {
+                display: none;
+            }
+            @include max(640) {
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                width: 30px;
+                height: 30px;
+                &::after,
+                &::before {
+                    top: 8px;
+                    left: 48%;
+                    height: 50%;
+                }
+            }
+        }
+        .close {
+            height: 64px;
+            right: 42px;
+            top: 52px;
+            opacity: 1;
+        }
+        .close:before,
+        .close:after {
+            width: 2px;
+        }
+    }
+    .modal-dialog {
+        width: 100%!important;
+        margin-top: 0!important;
+        .modal-body {
+            height: 100vh;
+            padding: 0;
+            padding-top: 130px;
+            @include max(1450) {
+                padding-top: 110px;
+            }
+            @include max(767) {
+                padding-top: 35px;
+            }
+            @include max(480) {
+                padding: 30px 15px 30px;
+            }
+            .mainSliderImg {
+                background: rgba(238, 58, 78, 0.0196078431372549);
+                padding: 15px;
+                @include max(767) {
+                    padding: 0;
+                }
+                .slider-for {
+                    // padding: 0 75px;
+                    // width: 89%;
+                    width: 1092px;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    figure {
+                        height: 64vh;
+                        @include max(1450) {
+                            height: 53vh;
+                            background-size: contain;
+                        }
+                        @include max(1199) {
+                            height: 60vh;
+                        }
+                        @include max(767) {
+                            height: 350px;
+                            background-size: cover!important;
+                        }
+                        img {
+                            // border-radius: 16px;
+                        }
+                    }
+                    button.slick-arrow {
+                        &.slick-prev {
+                            left: -80px;
+                            @include max(991) {
+                                left: -45px;
+                            }
+                            @include max(576) {
+                                left: 25px;
+                            }
+                        }
+                        &.slick-next {
+                            right: -80px;
+                            @include max(991) {
+                                right: -45px;
+                            }
+                            @include max(576) {
+                                right: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            .slideDetails {
+                padding-top: 35px;
+                width: 1100px;
+                max-width: 100%;
+                margin: 0 auto 30px;
+                @include max(640) {
+                    padding-top: 15px;
+                }
+                .thumbSliders {
+                    // width: 285px;
+                    // height: 65px;
+                    overflow: hidden;
+                    .slider-nav {
+                        .slick-slide {
+                            margin: 0 5px;
+                            figure {
+                                img {
+                                    border-radius: 4px;
+                                }
+                            }
+                        }
+                        .slick-slide.slick-current {
+                            figure {
+                                border-radius: 4px;
+                                opacity: 0.5;
+                            }
+                        }
+                        .slick-list {
+                            margin: 0 -5px;
+                        }
+                        figure.img-center {
+                            height: 100px;
+                            width: 150px;
+                            text-align: center;
+                            margin: 0 auto;
+                            cursor: pointer;
+                            @include max(1199) {
+                                width: 135px;
+                                height: auto;
+                            }
+                            @include max(767) {
+                                width: 100px;
+                                height: auto;
+                            }
+                            @include max(640) {
+                                width: 100%;
+                            }
+                            img {
+                                display: block;
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .custom_paging {
+        position: absolute;
+        right: 0;
+        top: -40px;
+        @include max(1450) {
+            top: -45px;
+        }
+        @include max(767) {
+            top: -30px;
+        }
+        li {
+            display: none;
+            &.slick-active {
+                display: block;
+            }
+        }
+    }
+    .slide-no-details {
+        width: 1100px;
+        max-width: 100%;
+        margin: 0 auto;
+        @include justify-content(space-between);
+        span {
+            font-size: 1.8rem;
+            font-weight: $font-bold;
+            line-height: 1.375em;
+            color: #484848;
+            display: block;
+        }
+        h4 {
+            font-size: 1.8rem;
+            font-weight: $font-bold;
+            line-height: 1.375em;
+            color: #484848;
+            display: block;
+        }
+    }
+}
+
+.chevron-left,
+.chevron-right {
+    &:hover {
+        color: $green;
+    }
+}
+
+div[role="period"] {
+    &:hover {
+        color: $green;
+    }
+}
+
+.bd-popup .modal.enquiry .login-form .input-holder .intl-tel-input .tel-dropdown {
+    margin-left: 108px;
+}
+
+.bd-popup .modal.enquiry .login-form .input-holder .intl-tel-input .selected-flag {
+    outline: none!important;
+}
+
+@include max(767.98) {
+    .modal-backdrop {
+        display: none!important;
+    }
+}
+
+.modal-body {
+    @include placeholder {
+        color: $text-color;
+    }
+}

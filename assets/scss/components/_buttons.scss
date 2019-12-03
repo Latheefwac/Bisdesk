@@ -1,0 +1,339 @@
+$button-hover-border-color:#6FC75D;
+.btn-grp {
+	.btn {
+		margin: 0 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.btn {
+	display: inline-flex;
+	-webkit-display: inline-flex;
+	align-items: center;
+	background-color: $primary-color;
+	color: $white;
+	@include border-radius(4px);
+	font-size:  1.4rem;
+	@include font-medium();
+	padding: 0 30px;
+	min-height: 50px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	@include transition(all,ease-in-out,0.3s);
+	position: relative;
+	box-shadow: none;
+	// border: none;
+	border: 1px solid $primary-color;
+	&:hover {
+		// opacity: 0.6;
+		background-color: $white;
+		color: $primary-color;
+	}	
+	&.primary {
+		background:$primary-color;
+		color: $white;
+		&:hover {
+			color: $white;
+		}
+	}
+	&.btn-md {
+		min-height: 50px;
+		font-size: 1.4rem;
+		@include max(767.98) {
+			min-height: 40px;
+			font-size: 1.6rem;
+		}
+		@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+			padding-top: 14px!important;
+		}
+
+	} 
+	&.btn-sm {
+		min-height: 35px;
+		font-size: 1.4rem;
+		@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+			padding-top: 6px!important;
+		}
+		@include max(767.98) {
+			min-height: 30px;
+		}
+	} 
+	&.btn-lg {
+		min-height: 60px;
+		font-size: 1.6rem;
+		// @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+		// 	padding-top: 20px;
+		// }
+		@include max(1450) {
+			min-height: 60px;
+			font-size: 1.5rem;
+		}
+		@include max(1199) {
+			min-height: 50px;
+		}
+		@include max(767) {
+			min-height: 40px;
+		}
+	}
+	&.btn-icon  {
+		position: relative;
+		padding-left: 50px;
+		img,svg {
+			position: absolute;
+			width: 22px;
+			height: 22px;
+			left: 15px;
+			fill: $white;
+			@include transition(all,ease-in-out,0.3s);
+		}
+		&:hover{
+			svg{
+				fill: $primary-color !important;
+			}
+		}
+	}
+	&.learn-more  {
+		position: relative;
+		background:none;
+		color: $darkpurple;
+		@include font-bold();
+		min-height: inherit;
+		font-size: 1.4rem;
+		padding-left: 0;
+		border: none;
+		@include max(767.98) {
+			font-size: 1.6rem;
+		}
+		&:after {
+			position: absolute;
+			content:'\e800';
+			font-family: $icons;
+			right: 8px;
+			top: 0;
+			@include rotate(272deg);
+			color: #9781B9;
+			@include transition(all,ease-in-out,0.3s);
+		}
+		&:hover{
+			&::after{
+				right: 0;
+				color: #3D2070;
+			}
+		}
+	}
+
+	&.styled {
+		border: 1px solid #3D2070;
+		background:transparent;
+		color: $darkpurple;
+		@include border-radius(25px);
+		@include font-medium();
+		font-size: 1.4rem;
+		padding: 0 25px;
+		@include max(767.98) {
+			font-size: 1.6rem;
+		}
+		&:hover{
+			background-color: #3D2070;
+			color: #fff;
+			opacity: 1;
+		}
+	
+	}
+	&.bd-curve {
+		@include border-radius(5px);	
+	}
+	&.text-color {
+		color: $text-color;
+	}
+	&.view-all {
+		font-size: 1.4rem;
+		position: relative;
+		background:none;
+		padding: 0;
+		color: $darkpurple;
+		@include font-bold();
+		min-height: inherit;
+		border: none;
+		@include max(991.98) {
+			font-size: 1.8rem;
+		}
+		&:hover {
+			color:$primary-color!important;
+			opacity: 1;
+		}
+		&.dim {
+			color: #A0A0A0;
+		}
+		span {
+			@include font-regular();
+			display: inline-block;
+			margin-left: 10px;
+		}
+	}
+	&.deactive {
+		color:#C6C6C6;
+		border: 1px solid #C6C6C6;
+		padding-right: 15px;
+		padding-left: 15px;
+		background-color: transparent;
+		&:hover{
+			color: #C6C6C6;
+			opacity: 0.4; 
+			background-color: transparent;
+		}
+	}
+	&.prebook-btn{
+		background-color: transparent;
+		// border: none;
+		&:hover{
+			background-color: transparent;
+			
+		}
+	}
+	&.full-width {
+		width: 100%;
+		text-align: center;
+	}
+	&.btn-white {
+		background:$white;
+		height: 37px;
+		min-height: 37px;
+		color: $text-color;
+		border: none!important;
+		font-size: 1.6rem;
+		padding: 0 15px;
+		img , svg {
+			margin-right: 9px;
+		}
+	}
+	
+}
+#back-to-top {
+	cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: -200px;
+    @include transition(all,ease,0.5s);
+    right: 15px;
+    z-index: 99;
+    background: $primary-color;
+    color: #fff;
+    padding: 5px 8px;
+    border: 1px solid#fff;
+    @include border-radius(15px);
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0; 
+    border-bottom: 0;
+    &:hover {
+       background:$black; 
+    }
+    &.visible {
+        bottom: 0;
+        opacity: 1;
+    }
+    @include max(1199) {display: none;}
+}
+.back-btn {
+    position: fixed;
+    right: 0px;
+    bottom: 50%;
+    transform:translateX(-50%);
+    opacity: 0;
+    @include transition(all,ease,0.35s);
+    z-index: 99;
+    background: $primary-color;
+    color: #fff;
+    @include border-radius(15px);
+    border-top-right-radius:0;
+    border-bottom-right-radius:0; 
+    padding: 8px 10px;
+    &:hover {
+       background:$black; 
+       @include transition(all,ease,0.35s);
+       right: 0;
+    }
+    &.visible {
+        right: 0px;
+        opacity: 1;
+        @include transformY(0);
+        &:hover {
+	       @include transition(all,ease,0.35s);
+	       right: 0;
+    	}
+    }
+    @include max(1199) {display: none;}
+}
+
+.tgl {
+	display: none;
+  
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+  
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 38px;
+		height: 20px;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+			box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28)
+		}
+    
+		&:after {
+			left: 0;
+		}
+    
+		&:before {
+			display: none;
+		}
+	}
+  
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+}
+
+// themes
+.tgl-light {
+	+ .tgl-btn {
+		background: url(../images/toggle-off.svg);
+		border-radius: 2em;
+		padding: 2px;
+		transition: all .4s ease;
+		&:after {
+			border-radius: 50%;
+			background: #fff;
+			transition: all .2s ease;
+		}
+	}
+  
+	&:checked + .tgl-btn {
+		background: url(../images/toggle-on.svg);;
+	}
+}
+
+
+
